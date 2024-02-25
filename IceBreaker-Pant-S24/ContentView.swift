@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct ContentView: View {
+    let db = Firestore.firestore()
+    
     @State var txtFirstName: String = ""
     @State var txtLastName: String = ""
     @State var txtPrefName: String = ""
     @State var txtQuestion: String = ""
     @State var txtAnswer: String = ""
-    
-    
+    @State var questions = [Question]()
     var body: some View {
         VStack {
             Text("IceBreaker")
@@ -43,10 +45,33 @@ struct ContentView: View {
         .multilineTextAlignment(.center)
         .autocorrectionDisabled()
         .padding()
+        .onAppear(){
+            getQuestionFromFirebase()
+        }
     }
     
     func setRandomQuestion(){
-        print("btn pressed")
+        var newQuestion = questions.randomElement()?.text
+        self.txtQuestion = newQuestion!
+    }
+    
+    func getQuestionFromFirebase(){
+        db.collection("questions")
+            .getDocuments(){ (querySnapshot,err) in
+                if let err = err { //if error is not null
+                    print("Error getting documents: \(err)")
+                } else{
+                    // if we get data from firebase
+                    for document in querySnapshot!.documents{
+                        if let question = Question(id: document.documentID, data: document.data()){
+                            self.questions.append(question)
+                        }
+                    }
+                }
+                    
+                
+            }
+         
     }
     func writeStudentsToFirebase(){
         print("FirstName: \(txtFirstName)")
