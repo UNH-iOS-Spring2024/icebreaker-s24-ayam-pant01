@@ -11,6 +11,7 @@
 		E17184A72B8A3E1900EB4FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17184A62B8A3E1900EB4FEB /* ContentView.swift */; };
 		E17184A92B8A3E1B00EB4FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17184A82B8A3E1B00EB4FEB /* Assets.xcassets */; };
 		E17184AC2B8A3E1B00EB4FEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17184AB2B8A3E1B00EB4FEB /* Preview Assets.xcassets */; };
+		E17184B32B8BAB2800EB4FEB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17184B22B8BAB2800EB4FEB /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E17184A62B8A3E1900EB4FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E17184A82B8A3E1B00EB4FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E17184AB2B8A3E1B00EB4FEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E17184B22B8BAB2800EB4FEB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				E17184A62B8A3E1900EB4FEB /* ContentView.swift */,
 				E17184A82B8A3E1B00EB4FEB /* Assets.xcassets */,
 				E17184AA2B8A3E1B00EB4FEB /* Preview Content */,
+				E17184B22B8BAB2800EB4FEB /* Question.swift */,
 			);
 			path = "IceBreaker-Pant-S24";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17184B32B8BAB2800EB4FEB /* Question.swift in Sources */,
 				E17184A72B8A3E1900EB4FEB /* ContentView.swift in Sources */,
 				E17184A52B8A3E1900EB4FEB /* IceBreaker_Pant_S24App.swift in Sources */,
 			);

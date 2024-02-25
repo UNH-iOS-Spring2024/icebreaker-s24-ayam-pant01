@@ -11,8 +11,10 @@ struct ContentView: View {
     @State var txtFirstName: String = ""
     @State var txtLastName: String = ""
     @State var txtPrefName: String = ""
-    @State var txtQuestion: String = "Test Question"
+    @State var txtQuestion: String = ""
     @State var txtAnswer: String = ""
+    
+    
     var body: some View {
         VStack {
             Text("IceBreaker")
